@@ -2,14 +2,14 @@
 
 
 
-
+![10_21_11_41_54](images/second/10_21_11_41_54.png)
 
 
 ### Final result
 
 - On corner of perspective area still have distortion and fish eye camera had blind spot
 
-![](result/second/BirdView Result_screenshot_21.10.2021.png)
+![img](result/second/BirdView Result_screenshot_21.10.2021.png)
 
 
 
