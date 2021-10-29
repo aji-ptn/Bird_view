@@ -20,7 +20,7 @@
 ### Final result
 
 - On corner of perspective area still have distortion and fish eye camera had blind spot
-<div style="width:300px">
+<div style="width:100px">
 
 ![BirdView_Result_screenshoot](result/second/BirdView_Result_screenshoot.png)
 </div>
