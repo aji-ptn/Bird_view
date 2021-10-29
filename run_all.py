@@ -2,20 +2,15 @@ import os
 import numpy as np
 import cv2
 from PIL import Image
-from surround_view import FisheyeCameraModel, display_image, BirdView
+from surround_view import display_image, BirdView
 import surround_view.param_settings_2 as settings
 
 
 def main():
     names = settings.camera_names
     print(names)
-    images = [os.path.join(os.getcwd(), "images/third", name + ".png") for name in names]
-    yamls = [os.path.join(os.getcwd(), "yaml/third", name + ".yaml") for name in names]
-    # shapes = [settings.project_shapes[names] for name in names]
-    # matrix = settings.
-
-
-    # camera_models = [FisheyeCameraModel(camera_file, camera_name) for camera_file, camera_name in zip (yamls, names)]
+    images = [os.path.join(os.getcwd(), "images/second", name + ".png") for name in names]
+    yamls = [os.path.join(os.getcwd(), "yaml/second", name + ".yaml") for name in names]
 
     projected = []
     for image_file, yamls, name in zip(images, yamls, names):
