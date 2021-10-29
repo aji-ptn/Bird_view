@@ -9,16 +9,7 @@
 
 - On corner of perspective area still have distortion and fish eye camera had blind spot
 
-- ![BirdView_Result_screenshot_21_10_2021](result/second/BirdView_Result_screenshot_21_10_2021.png)
-
-  
-
-- eqweqweqweqweqweqw
-
-  
-
-![img](result/second/BirdView_Result_screenshot_21_10_2021.png)
-
+![BirdView_Result_screenshoot](result/second/BirdView_Result_screenshoot.png)
 
 
 
