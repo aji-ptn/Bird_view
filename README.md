@@ -22,7 +22,7 @@
 - On corner of perspective area still have distortion and fish eye camera had blind spot
 
 
-<img src="/home/aji/Documents/My/Github/Bird_view/img_2.png" alt="img_2" style="zoom:75%;" />
+<img src="img_2.png" alt="img_2" style="zoom:75%;" />
 
 
 
