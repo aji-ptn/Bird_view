@@ -1,4 +1,7 @@
+
+
 # Experiment of bird view 
+
 ### 1. Bird view Calibration
 - **Outside Area** : the distance between the perspective area and the outer area that will be covered by the surrounding view​​
 - **Perspective Area** : the area that gives the top-view image perspective
@@ -13,17 +16,14 @@
 ![img_2.png](img_2.png)
 
 
-![10_21_11_41_54](images/second/10_21_11_41_54.png)
-
-
 
 ### Final result
 
 - On corner of perspective area still have distortion and fish eye camera had blind spot
-<div style="width:100px">
 
-![BirdView_Result_screenshoot](result/second/BirdView_Result_screenshoot.png)
-</div>
+
+<img src="/home/aji/Documents/My/Github/Bird_view/img_2.png" alt="img_2" style="zoom:75%;" />
+
 
 
 ## Documentation and Reference
