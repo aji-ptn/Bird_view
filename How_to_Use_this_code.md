@@ -1,4 +1,4 @@
-# How to run this code
+# How to Use
 ### Documentation please revert to this [link](https://mcut-my.sharepoint.com/:f:/g/personal/m07158031_o365_mcut_edu_tw/Enu7QLAPY15OkFzQuGQrBV4BK8BqS_Oq_2D-eVQ3WeZxSA?e=BCHNAt)
 
 ## 1. Clone this repository (branch)
@@ -45,7 +45,7 @@ Rear Camera
 ```
 to be able to change this value please open the file [link](get_projection_maps.py)
 
-![img_1.png](img_1.png)
+![img_1.png](asset/img_1.png)
 
 - **self.camera_name** : you can change to be:
 ```
@@ -69,13 +69,15 @@ python get_projection_maps.py
 - Select point on checkerboard 
 - make sure you click on the right position and right order. *0, 1, 2, 3*
 
-![img.png](img.png)
+![img.png](asset/img.png)
 
 Result Perspective view
+
 ![](data/sixth/cutting/front.png)
 
 Projection matrix, alpha, beta, zoom factor has been save in yaml file.
-![img_2.png](img_2.png)
+
+![img_2.png](asset/img_2.png)
 
 **Do the same this to other camera.**
 
@@ -83,14 +85,14 @@ Projection matrix, alpha, beta, zoom factor has been save in yaml file.
 - After Finish all the proses above, you can move to another code **bird_view.py** [link](bird_view.py)
 - Make sure the folder_path was same just like the get_projection_maps.
 
-![img_3.png](img_3.png)
+![img_3.png](asset/img_3.png)
 
 - type this command or run this proram
 ```
 python bird_view.py
 ```
 
-![](data/sixth/Result.png)
+![](data/sixth/Resulttlast.png)
 
 # end
 Please read the documentation for more information. [link](https://mcut-my.sharepoint.com/:f:/g/personal/m07158031_o365_mcut_edu_tw/Enu7QLAPY15OkFzQuGQrBV4BK8BqS_Oq_2D-eVQ3WeZxSA?e=BCHNAt)

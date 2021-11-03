@@ -58,5 +58,5 @@ project_keypoints = {
     "rear": [(total_w/2 - check_w/2, outher_h), (total_w/2 + check_w/2, outher_h),
              (total_w/2 - check_w/2, outher_h + check_h), (total_w/2 + check_w/2, outher_h + check_h)],
 }
-car_image = cv2.imread(os.path.join(os.getcwd(), "data", "car.png"))
+car_image = cv2.imread(os.path.join(os.getcwd(), "data", "box.png"))
 car_image = cv2.resize(car_image, (xr - xl, yb - yt))

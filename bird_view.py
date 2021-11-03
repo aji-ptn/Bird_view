@@ -39,7 +39,7 @@ def main():
     birdview.make_luminance_balance().stitch_all_parts()
     birdview.make_white_balance()
     birdview.copy_car_image()
-    cv2.imwrite("data/" + folder_path + "/Resulttlast.png", birdview.image)
+    cv2.imwrite("data/" + folder_path + "/Resulttla.png", birdview.image)
     ret = display_image("BirdView Result", birdview.image)
 
     if ret > 0:
