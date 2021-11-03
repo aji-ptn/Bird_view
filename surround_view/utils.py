@@ -34,13 +34,6 @@ def convert_binary_to_bool(mask):
     return (mask.astype(np.float) / 255.0).astype(np.int)
 
 
-def adjust_luminance(gray, factor):
-    """
-    Adjust the luminance of a grayscale image by a factor.
-    """
-    return np.minimum((gray * factor), 255).astype(np.uint8)
-
-
 def get_mean_statistisc(gray, mask):
     """
     Get the total values of a gray image in a region defined by a mask matrix.
@@ -98,9 +91,10 @@ def get_weight_mask_matrix(imA, imB, dist_threshold=5):
     """
     Get the weight matrix G that combines two images imA, imB smoothly.
     """
-    print("-----------")
-    print(imA.shape)
-    print(imB.shape)
+
+    # print(imA.shape)
+    # print(imB.shape)
+    # print("-----------")
     overlapMask = get_overlap_region_mask(imA, imB)
     overlapMaskInv = cv2.bitwise_not(overlapMask)
     indices = np.where(overlapMask == 255)
@@ -140,3 +134,10 @@ def make_white_balance(image):
     G = adjust_luminance(G, c2)
     R = adjust_luminance(R, c3)
     return cv2.merge((B, G, R))
+
+
+def adjust_luminance(gray, factor):
+    """
+    Adjust the luminance of a grayscale image by a factor.
+    """
+    return np.minimum((gray * factor), 255).astype(np.uint8)

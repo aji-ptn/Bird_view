@@ -14,11 +14,11 @@ import Moildev
 class Projection():
     def __init__(self):
         self.project_matrix = None
-        self.camera_name = "right"
+        self.camera_name = "front"
         self.folder_path = "sixth"
-        self.alpha = -46.8
-        self.beta = -1
-        self.zoom = 3.5
+        self.alpha = -50.1
+        self.beta = 1.8
+        self.zoom = 4
         self.main()
 
     def get_projection_map(self, camera_name, image):
@@ -45,7 +45,7 @@ class Projection():
         image_file = ("data/" + self.folder_path + "/original/" + self.camera_name + ".png")
         print(image_file)
         image = cv2.imread(image_file)
-        # image = self.get_anypoint(image)
+        image = self.get_anypoint(image)
         image = self.resize(image)
         success = self.get_projection_map(self.camera_name, image)
         cv2.imwrite("data/" + self.folder_path + "/undistortion/" + self.camera_name + ".png", image)

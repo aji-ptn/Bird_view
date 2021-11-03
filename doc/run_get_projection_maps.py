@@ -43,8 +43,8 @@ def main():
     scale = [0.7, 0.8]
     shift = [-150, -100]
     camera_name = "left"
-    camera_file = os.path.join(os.getcwd(), "yaml", camera_name + ".yaml")
-    image_file = os.path.join(os.getcwd(), "images", camera_name + ".png")
+    camera_file = os.path.join(os.getcwd(), "../yaml", camera_name + ".yaml")
+    image_file = os.path.join(os.getcwd(), "../images", camera_name + ".png")
     image = cv2.imread(image_file)
     camera = FisheyeCameraModel(camera_file, camera_name)
     camera.set_scale_and_shift(scale, shift)

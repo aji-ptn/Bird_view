@@ -72,7 +72,7 @@ class ProjectedImageBuffer(object):
 
 
 def FI(front_image):
-    print(front_image.shape)
+    # print(front_image.shape)
     value = front_image[:, :xl]
     # print(value.shape)
     # print("-------------")
@@ -305,12 +305,13 @@ class BirdView(BaseThread):
 
     def get_weights_and_masks(self, images):
         front, back, left, right = images
-        G0, M0 = utils.get_weight_mask_matrix(FI(front), LI(left))
         print("front left")
-        G1, M1 = utils.get_weight_mask_matrix(FII(front), RII(right))
+        G0, M0 = utils.get_weight_mask_matrix(FI(front), LI(left))
         print("front right")
-        G2, M2 = utils.get_weight_mask_matrix(BIII(back), LIII(left))
+        G1, M1 = utils.get_weight_mask_matrix(FII(front), RII(right))
         print("back left")
+        G2, M2 = utils.get_weight_mask_matrix(BIII(back), LIII(left))
+        print("back right")
         G3, M3 = utils.get_weight_mask_matrix(BIV(back), RIV(right))
         self.weights = [np.stack((G, G, G), axis=2) for G in (G0, G1, G2, G3)]
         self.masks = [(M / 255.0).astype(np.int) for M in (M0, M1, M2, M3)]

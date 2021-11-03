@@ -11,12 +11,10 @@ def main():
     names = settings.camera_names
     folder_path = "sixth"  # ------------------------------------------------------------------------------
     images = [os.path.join(os.getcwd(), "data/", folder_path + "/undistortion/" + name + ".png") for name in names]
-    print(images)
     yamls = [os.path.join(os.getcwd(), "data/", folder_path + "/yaml/" + name + ".yaml") for name in names]
 
     projected = []
     for image_file, yamls, name in zip(images, yamls, names):
-        print(name)
         img = cv2.imread(image_file)
         # cv2.imshow(name, img)
         # cv2.waitKey()
@@ -24,7 +22,7 @@ def main():
         shape = settings.project_shapes[name]
 
         img = project(img, matrix, shape)
-        img = flip(name, img)
+        img = rotate(name, img)
 
         projected.append(img)
         # print(len(projected))
@@ -60,7 +58,7 @@ def read_matrix(file):
     return matrix
 
 
-def flip(camera_name, image):
+def rotate(camera_name, image):
     if camera_name == "front":
         return image.copy()
     elif camera_name == "rear":
