@@ -2,20 +2,24 @@ import os
 import numpy as np
 import cv2
 from PIL import Image
+
 from surround_view import display_image, BirdView
 import surround_view.param_settings_2 as settings
 
 
 def main():
     names = settings.camera_names
-    print(names)
-    images = [os.path.join(os.getcwd(), "images/second", name + ".png") for name in names]
-    yamls = [os.path.join(os.getcwd(), "yaml/second", name + ".yaml") for name in names]
+    folder_path = "sixth"  # ------------------------------------------------------------------------------
+    images = [os.path.join(os.getcwd(), "data/", folder_path + "/undistortion/" + name + ".png") for name in names]
+    print(images)
+    yamls = [os.path.join(os.getcwd(), "data/", folder_path + "/yaml/" + name + ".yaml") for name in names]
 
     projected = []
     for image_file, yamls, name in zip(images, yamls, names):
         print(name)
         img = cv2.imread(image_file)
+        # cv2.imshow(name, img)
+        # cv2.waitKey()
         matrix = read_matrix(yamls)
         shape = settings.project_shapes[name]
 
@@ -25,10 +29,11 @@ def main():
         projected.append(img)
         # print(len(projected))
     #
-    for project1, name in zip(projected, names):
-        print(name)
-        cv2.imshow(name, project1)
-        cv2.waitKey()
+    # for project1, name in zip(projected, names):
+    #     print(name)
+    #     cv2.imwrite("data/" + folder_path + "/cutting/" + name + ".png", project1)
+    #     cv2.imshow(name, project1)
+    #     cv2.waitKey()
 
     birdview = BirdView()
     Gmat, Mmat = birdview.get_weights_and_masks(projected)
@@ -36,8 +41,9 @@ def main():
     birdview.make_luminance_balance().stitch_all_parts()
     birdview.make_white_balance()
     birdview.copy_car_image()
+    cv2.imwrite("data/" + folder_path + "/Resulttlast.png", birdview.image)
     ret = display_image("BirdView Result", birdview.image)
-    cv2.imwrite("bird3.png", birdview.image)
+
     if ret > 0:
         Image.fromarray((Gmat * 255).astype(np.uint8)).save("weights.png")
         Image.fromarray(Mmat.astype(np.uint8)).save("masks.png")

@@ -72,7 +72,7 @@ class ProjectedImageBuffer(object):
 
 
 def FI(front_image):
-    # print(front_image.shape)
+    print(front_image.shape)
     value = front_image[:, :xl]
     # print(value.shape)
     # print("-------------")

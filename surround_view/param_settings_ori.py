@@ -2,7 +2,7 @@ import os
 import cv2
 
 
-camera_names = ["front", "back", "left", "right", "eta_front"]
+camera_names = ["front", "back", "left", "right"]
 
 # --------------------------------------------------------------------
 # (shift_width, shift_height): how far away the birdview looks outside
@@ -32,7 +32,6 @@ project_shapes = {
     "back":  (total_w, yt),
     "left":  (total_h, xl),
     "right": (total_h, xl),
-    "eta_front": (total_h, yt)
 }
 
 # pixel locations of the four points to be chosen.
@@ -59,28 +58,8 @@ project_keypoints = {
               (shift_h + 160, shift_w + 160),
               (shift_h + 720, shift_w + 160)],
 
-
-    "eta_front": [(shift_w + 120, shift_h),
-                  (shift_w + 480, shift_h),
-                  (shift_w + 120, shift_h + 160),
-                  (shift_w + 480, shift_h + 160)],
-
-    "eta_front": [(shift_w + 120, shift_h),
-                  (shift_w + 480, shift_h),
-                  (shift_w + 120, shift_h + 160),
-                  (shift_w + 480, shift_h + 160)],
-
-    "eta_front": [(shift_w + 120, shift_h),
-                  (shift_w + 480, shift_h),
-                  (shift_w + 120, shift_h + 160),
-                  (shift_w + 480, shift_h + 160)],
-
-    "eta_front": [(shift_w + 120, shift_h),
-                  (shift_w + 480, shift_h),
-                  (shift_w + 120, shift_h + 160),
-                  (shift_w + 480, shift_h + 160)],
-
 }
 
 car_image = cv2.imread(os.path.join(os.getcwd(), "images", "car.png"))
-car_image = cv2.resize(car_image, (xr - xl, yb - yt))
+# car_image = cv2.resize(car_image, (xr - xl, yb - yt))
+print(xr, xl)
