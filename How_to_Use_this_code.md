@@ -42,6 +42,8 @@ Rear Camera
     Alpha = -54.2 
     Beta = -2.8
     Zoom factor = 4
+    
+Note: This Value can be change depend with position of camera on car. once you get the value, you dont have to re-celculate again
 ```
 to be able to change this value please open the file [link](get_projection_maps.py)
 
