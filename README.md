@@ -59,7 +59,7 @@ For Perspective image (for get perspective from above view)
 
 ## Final result
 
-- On corner of perspective area still have distortion and fish eye camera had blind spot
+
 ![img.png](asset/img.png)
 
 
