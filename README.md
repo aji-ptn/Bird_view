@@ -45,7 +45,8 @@ For Perspective image (for get perspective from above view)
 
 ## 4. Un-distortion Image
 - Un-distortion image using anypoint mode 2
-- Alpha = -65, Beta = 0, Zoom factor = 3.5
+- Front Camera: Alpha = -50.1, Beta = 1.8, Zoom factor = 4
+- For other camera please read How to use this code please refert to [This](How_to_Use_this_code.md)
 
 ![img_4.png](asset/img_4.png)
 
