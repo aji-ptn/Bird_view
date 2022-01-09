@@ -11,9 +11,10 @@ objp[0, :, :2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 _img_shape = None
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
-images = glob.glob('/home/aji/Documents/Dataset/CALIB/raspi_enthaniya/*.png')
+images = glob.glob('/home/aji/Documents/Dataset/CALIB/OneDrive_2021-11-21/Left image/*.png')
 for fname in images:
     img = cv2.imread(fname)
+    print("read oke")
     if _img_shape == None:
         _img_shape = img.shape[:2]
     else:
@@ -50,7 +51,7 @@ print("D=np.array(" + str(D.tolist()) + ")")
 
 
 def save():
-    fs = cv2.FileStorage("calibrattion.yaml", cv2.FILE_STORAGE_WRITE)
+    fs = cv2.FileStorage("calibration_.yaml", cv2.FILE_STORAGE_WRITE)
     fs.write("image count", N_OK)
     fs.write("resolution", (_img_shape[::-1]))
     fs.write("camera_matrix", K)

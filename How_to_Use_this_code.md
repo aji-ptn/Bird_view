@@ -13,7 +13,7 @@ git clone -b 03-11-2021 https://github.com/aji-ptn/Bird_view.git
 - Moildev
 
 ## 3. There contain 2 main program to run this file
-### 1. Projection matrix [link](get_projection_maps.py)
+### 1. Projection matrix [link](get_projection_MOILDEV.py)
 
 To get projection maps from undistorted image
 ### 2. Bird view [link](bird_view.py)
@@ -22,28 +22,21 @@ Combine all image and do stitching
 ## 4. Get map from projection view
 This part contain code for get projection image from undistorted image.
 
-### A. Set Up Alpha Beta and Zoom Factor
-To get the value of alpha beta and zoom factor it can be done by using the Moilapp application. This is to make the process easier. for details please read the documentation.  
+### A. Set parameter for calibration
+#### 1. For OpenCV need Set Up Calibration Value
+For OpenCV calibration yuu can compare on YAML for each parameter with original calibration
+You can adjust the parameter using apps 
+```commandline
+./effect/main.py
+```
+![img.png](img.png)
+#### 2. For Moildev need Set Up Alpha Beta and Zoom Factor
+To get the value of alpha beta and zoom factor it can be done by using the Moil-app application. This is to make the process easier. for details please read the documentation.  
 In this documentation, the alpha beta and zoom factor values have been prepared
 ```
-front
-    Alpha = -50.1
-    Beta = 1.8
-    Zoom factor = 4
-Left Camera
-    Alpha = -46.8
-    Beta = -1
-    Zoom factor = 3.5
-Right Camera
-    Alpha = -49.3 
-    Beta = 0.1
-    Zoom factor = 3.5
-Rear Camera
-    Alpha = -54.2 
-    Beta = -2.8
-    Zoom factor = 4
+check for every folder include ALPHA BETA and ZOOM Factor
 ```
-to be able to change this value please open the file [link](get_projection_maps.py)
+to be able to change this value please open the file [link](get_projection_MOILDEV.py)
 
 ![img_1.png](asset/img_1.png)
 

@@ -1,0 +1,20 @@
+%YAML:1.0
+---
+image count: 162
+resolution: !!opencv-matrix
+   rows: 2
+   cols: 1
+   dt: d
+   data: [ 848., 800. ]
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 2.9354574487390653e+02, 0., 4.3203738094560629e+02, 0.,
+       2.9354108277745536e+02, 4.0325338767493440e+02, 0., 0., 1. ]
+dist_coeffs: !!opencv-matrix
+   rows: 4
+   cols: 1
+   dt: d
+   data: [ -3.6190418114120195e-03, 3.4258068660120718e-02,
+       -2.1101939281823946e-02, 3.0728906611455294e-03 ]

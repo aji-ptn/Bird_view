@@ -1,3 +1,6 @@
+### This Code create by Aji,
+# for adjust parameter opencv internal parameters
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
 import sys
@@ -16,7 +19,8 @@ class Controller(Ui_MainWindow):
         self.D = None
         self.resolution = None
         self.image_name = "right"
-        self.image = "/home/aji/Documents/My/Github/Bird_view/data/eleventh/original/" + self.image_name + ".png"
+        self.folder = "thirteen"
+        self.image = "/home/aji/Documents/My/Github/Bird_view/data/" + self.folder + "/original/" + self.image_name + ".png"
         # self.image = "http://192.168.50.74:8000/stream.mjpg"
         self.image = cv2.imread(self.image)
         self.parameters_path = "../calibrattion.yaml"
@@ -100,7 +104,7 @@ class Controller(Ui_MainWindow):
 
         self.label_o_fx_4.setText(str(round((self.new_matrix[0, 0]), 4)))
         self.label_12.setText(str(self.new_matrix[0, 1]))
-        self.label_o_px_4.setText(str(round((self.new_matrix[0, 2]), 4 )))
+        self.label_o_px_4.setText(str(round((self.new_matrix[0, 2]), 4)))
 
         self.label_34.setText(str(self.new_matrix[1, 0]))
         self.label_fy_4.setText(str(round((self.new_matrix[1, 1]), 4)))
