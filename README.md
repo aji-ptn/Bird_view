@@ -5,12 +5,29 @@ Documentation still progress for **11-11-2021 branch**
 ### How to use this code please refert to [This](How_to_Use_this_code.md)
 ### Previous Documentation please revert to this [link](https://mcut-my.sharepoint.com/:f:/g/personal/m07158031_o365_mcut_edu_tw/Enu7QLAPY15OkFzQuGQrBV4BK8BqS_Oq_2D-eVQ3WeZxSA?e=BCHNAt)
 
+### Please open [*data*](data) folder to see all experiment
 ```
 sixth = Third Experiment
-Eleventh = Opencv Undistortion (Adjust Parameter(fourth experiment)) 
+Eleventh = Opencv Undistortion (Adjust Parameter(fourth experiment)) with image blending
+Thirteen = Opencv Undistortion (Adjust Parameter(fourth experiment)) with overlapping image
 Twelveth = MoilDev Undistortion (fourth experiment)
-Thirteen = Opencv Undistortion (without Adjust Parameter(fourth experiment))
 ```
+- result experiment without adjustment parameter (focal and principal point)
+
+![](data/thirteen/Resulttla.png)
+
+result **Eleventh** experimenter
+- result experiment adjustment parameter (focal and principal point)
+- using color blending for stitching image
+
+![](data/eleventh/Resulttla.png)
+
+result **thirteen** folder
+- result experiment adjustment parameter (focal and principal point)
+- using overlapping image for combine image
+- documentation code for this experiment still development
+
+![](data/thirteen/final.png)
 
 ### 1. Bird view Calibration
 - **Outside Area** : the distance between the perspective area and the outer area that will be covered by the surrounding view​​

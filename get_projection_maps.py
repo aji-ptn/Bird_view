@@ -14,11 +14,12 @@ import Moildev
 class Projection():
     def __init__(self):
         self.project_matrix = None
-        self.camera_name = "right"
-        self.folder_path = "eight"
-        self.alpha = -49.3
-        self.beta = 0.1
-        self.zoom = 3.5
+        self.camera_name = "rear"
+        # self.folder_path = "sixteen"
+        self.folder_path = "fifteen"
+        self.alpha = -60
+        self.beta = 0
+        self.zoom = 5
         self.main()
 
     def get_projection_map(self, camera_name, image):
@@ -47,8 +48,9 @@ class Projection():
         image = cv2.imread(image_file)
         image = self.get_anypoint(image)
         image = self.resize(image)
+        # cv2.imwrite("data/" + self.folder_path + "/undistortion/" + self.camera_name + ".png", image)
         success = self.get_projection_map(self.camera_name, image)
-        cv2.imwrite("data/" + self.folder_path + "/undistortion/" + self.camera_name + ".png", image)
+
         if success:
             print("saving projection matrix to yaml")
             self.save_data(self.project_matrix)

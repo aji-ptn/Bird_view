@@ -1,1 +1,2 @@
-Experiment for opencv calibration without undistortion process
+Experiment for opencv calibration
+
